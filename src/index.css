@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-color: rgba(255, 81, 47, 0.35) #f8f9fa;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f8f9fa;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 81, 47, 0.3);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 81, 47, 0.5);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply bg-white border border-ink-200;
+  }
+  .surface-alt {
+    @apply bg-cream-200 border border-ink-200;
+  }
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brand-600 via-brand-500 to-gold-400 bg-clip-text text-transparent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sunset-gradient bg-[length:150%_100%] bg-left px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-right hover:shadow-glow active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink-900 bg-transparent px-6 py-3 text-sm font-semibold text-ink-900 transition-all duration-300 hover:bg-ink-900 hover:text-white active:scale-[0.97];
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-6 py-3 text-sm font-semibold text-ink-900 transition-all duration-300 hover:bg-gold-500 hover:shadow-glow-gold active:scale-[0.97];
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm text-ink-900 placeholder-ink-400 outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-100;
+  }
+  .card-surface {
+    @apply surface rounded-2xl shadow-card transition-all duration-300;
+  }
+  .badge-gradient {
+    @apply bg-sunset-gradient text-white shadow-sm;
+  }
+}

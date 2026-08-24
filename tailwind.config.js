@@ -1,0 +1,85 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        cream: {
+          DEFAULT: '#FFFFFF',
+          50: '#FFFFFF',
+          100: '#FCFCFD',
+          200: '#F8F9FA',
+          300: '#EEF0F2',
+        },
+        ink: {
+          DEFAULT: '#111827',
+          900: '#111827',
+          800: '#1F2937',
+          700: '#374151',
+          600: '#4B5563',
+          500: '#6B7280',
+          400: '#9CA3AF',
+          300: '#D1D5DB',
+          200: '#E5E7EB',
+          100: '#F3F4F6',
+        },
+        brand: {
+          50: '#FFF1ED',
+          100: '#FFE0D6',
+          200: '#FFB8A3',
+          300: '#FF8F70',
+          400: '#FF6E4D',
+          500: '#FF512F',
+          600: '#E63E1E',
+          700: '#C22F15',
+          800: '#9B2410',
+          900: '#6E190B',
+        },
+        gold: {
+          50: '#FFF8EC',
+          100: '#FFEBC7',
+          200: '#FFD48A',
+          300: '#FFBB5C',
+          400: '#F09819',
+          500: '#D6820F',
+          600: '#B26A0C',
+          700: '#8C530A',
+          800: '#663C07',
+          900: '#402505',
+        },
+      },
+      fontFamily: {
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Sora"', '"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'radial-fade': 'radial-gradient(circle at 50% 0%, rgba(255,81,47,0.07), transparent 60%)',
+        'gold-fade': 'radial-gradient(circle at 50% 0%, rgba(240,152,25,0.10), transparent 60%)',
+        'dot-map': 'radial-gradient(rgba(240,152,25,0.35) 1px, transparent 1.5px)',
+        'sunset-gradient': 'linear-gradient(90deg, #FF512F 0%, #F09819 100%)',
+      },
+      backgroundSize: {
+        'dot-16': '16px 16px',
+      },
+      boxShadow: {
+        glow: '0 8px 28px -8px rgba(255,81,47,0.5)',
+        'glow-gold': '0 8px 28px -8px rgba(240,152,25,0.5)',
+        card: '0 2px 10px 0 rgba(17,24,39,0.06)',
+        'card-hover': '0 16px 40px -12px rgba(17,24,39,0.16)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'slide-up': 'slideUp 0.6s ease-out forwards',
+        'slide-in-right': 'slideInRight 0.35s cubic-bezier(0.16,1,0.3,1) forwards',
+        float: 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+        slideUp: { '0%': { opacity: 0, transform: 'translateY(24px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+        slideInRight: { '0%': { transform: 'translateX(100%)' }, '100%': { transform: 'translateX(0)' } },
+        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-4px)' } },
+      },
+    },
+  },
+  plugins: [],
+};
