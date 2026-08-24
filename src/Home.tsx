@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero + features strip: sized to fill the viewport below the sticky navbar */}
-      <div className="flex min-h-[calc(100vh-5rem)] flex-col">
+      <div className="hero-viewport flex flex-col">
         {/* Hero */}
         <section className="relative flex min-h-[420px] flex-1 items-center overflow-hidden border-b border-ink-200">
           <video

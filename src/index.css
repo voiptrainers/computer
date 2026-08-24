@@ -56,4 +56,10 @@
   .badge-gradient {
     @apply bg-sunset-gradient text-white shadow-sm;
   }
+  .hero-viewport {
+    /* vh fallback for older browsers; dvh (ignored if unsupported) tracks the
+       real visible viewport so mobile browser toolbars don't cut off content */
+    min-height: calc(100vh - 5rem);
+    min-height: calc(100dvh - 5rem);
+  }
 }

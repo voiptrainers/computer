@@ -2,7 +2,7 @@ interface LogoProps {
   className?: string;
 }
 
-export function LogoMark({ className = 'h-11 w-11' }: LogoProps) {
+export function LogoMark({ className = 'h-9 w-9 sm:h-11 sm:w-11' }: LogoProps) {
   return (
     <svg viewBox="0 0 100 100" className={className} aria-hidden="true">
       <circle cx="50" cy="50" r="45" fill="none" stroke="#F09819" strokeWidth="1.5" />
@@ -35,12 +35,12 @@ export function Wordmark({ tight = false }: { tight?: boolean }) {
   return (
     <div className="flex flex-col leading-none">
       <span
-        className={`font-display font-extrabold tracking-tight text-ink-900 ${tight ? 'text-sm' : 'text-lg'}`}
+        className={`font-display font-extrabold tracking-tight text-ink-900 ${tight ? 'text-sm' : 'text-base sm:text-lg'}`}
       >
         THE INDIAN <span className="text-brand-600">COMPUTERS</span>
       </span>
       {!tight && (
-        <span className="mt-1 flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.2em] text-gold-500">
+        <span className="mt-1 hidden items-center gap-1.5 text-[10px] font-semibold tracking-[0.2em] text-gold-500 sm:flex">
           <span className="h-px w-3 bg-gold-400" />
           SINCE 2007
         </span>
@@ -51,8 +51,8 @@ export function Wordmark({ tight = false }: { tight?: boolean }) {
 
 export default function Logo({ tight = false }: { tight?: boolean }) {
   return (
-    <div className="flex items-center gap-2.5">
-      <LogoMark className={tight ? 'h-9 w-9' : 'h-11 w-11'} />
+    <div className="flex items-center gap-2 sm:gap-2.5">
+      <LogoMark className={tight ? 'h-9 w-9' : 'h-9 w-9 sm:h-11 sm:w-11'} />
       <Wordmark tight={tight} />
     </div>
   );

@@ -37,7 +37,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="shrink-0">
+        <Link to="/" className="min-w-0">
           <Logo />
         </Link>
 
